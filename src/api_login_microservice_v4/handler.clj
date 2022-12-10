@@ -1,6 +1,8 @@
 (ns api-login-microservice-v4.handler
   (:require [compojure.api.sweet :refer :all]
             [ring.util.http-response :refer :all]
+            [api-login-microservice-v4.config.routes :as routes]
+            [api-login-microservice-v4.config.swagger :as swagger_config]
             [schema.core :as s]))
 
 (s/defschema Pizza
@@ -12,24 +14,6 @@
 
 (def app
   (api
-    {:swagger
-     {:ui "/"
-      :spec "/swagger.json"
-      :data {:info {:title "Api-login-microservice-v4"
-                    :description "Compojure Api example"}
-             :tags [{:name "api", :description "some apis"}]}}}
-
-    (context "/api" []
-      :tags ["api"]
-
-      (GET "/plus" []
-        :return {:result Long}
-        :query-params [x :- Long, y :- Long]
-        :summary "adds two numbers together"
-        (ok {:result (+ x y)}))
-
-      (POST "/echo" []
-        :return Pizza
-        :body [pizza Pizza]
-        :summary "echoes a Pizza"
-        (ok pizza)))))
+    swagger_config/swagger-routes
+    routes/document-routes
+   ))

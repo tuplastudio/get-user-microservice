@@ -1,6 +1,7 @@
  (defproject api-login-microservice-v4 "0.1.0-SNAPSHOT"
    :description "FIXME: write description"
    :dependencies [[org.clojure/clojure "1.10.0"]
+                  [compojure "1.7.0"] ; routing library
                   [metosin/compojure-api "2.0.0-alpha30"]]
    :ring {:handler api-login-microservice-v4.handler/app}
    :uberjar-name "server.jar"
