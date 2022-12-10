@@ -95,4 +95,4 @@ fabric.properties
 .DS_Store
 src/.DS_Store
 target
-target
+target/
