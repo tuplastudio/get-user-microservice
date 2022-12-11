@@ -9,6 +9,8 @@
                   [jarohen/nomad "0.9.1"] ; configuration handling library
                   [prismatic/schema "1.4.1"] ; bean validation equivalent for clojure
                   [ragtime "0.8.1"] ; migration utility
+                  [ring/ring-json "0.5.1"] ; ring server json support
+                  [ring/ring-defaults "0.3.4"] ; ring server default dependencies
                   [metosin/compojure-api "2.0.0-alpha30"]]
    :ring {:handler api-login-microservice-v4.handler/app}
    :uberjar-name "server.jar"
