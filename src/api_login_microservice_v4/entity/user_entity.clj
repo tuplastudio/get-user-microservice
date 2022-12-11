@@ -7,13 +7,14 @@
 (defentity user
   (table :users) ; Associated table
   (pk :id) ; primary key
-  (entity-fields :fisrt_name :last_name)) ; Default field for select
+  (entity-fields :first_name :last_name :email :id)) ; Default field for select
 
 ; -- Validation schema for complete document
 (def user-schema
   {:first_name schema/Str
    :last_name schema/Str
-   :od schema/Int})
+   :email schema/Str
+   :id schema/Int})
 
 ; -- Validation for input rest document
 (def user-schema-rest-in
