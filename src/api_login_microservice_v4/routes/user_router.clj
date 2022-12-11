@@ -8,11 +8,8 @@
 
 
 (def user-routes
-  (context "/users" [] :tags ["api-users"]
+  (context "/api/v1/users" [] :tags ["users"]
            (GET "/" []
                 :summary "Get all available users"
-                :return  [user-entity/user-schema]
-                :responses
-                         {200 {:schema      [user-entity/user-schema],
-                               :description "List of users"}}
+                ;:return  [user-entity/user-schema]
                 (user_controller/get-all-users))))

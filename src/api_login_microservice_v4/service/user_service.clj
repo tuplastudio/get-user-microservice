@@ -3,11 +3,14 @@
             [clojure.tools.logging :as log]
             [api-login-microservice-v4.entity.user-entity :as user]
             [api-login-microservice-v4.config.database :as database]
-            [api-login-microservice-v4.repository.user-repository :as user-repository]))
+            [api-login-microservice-v4.repository.user-repository
+             :as
+             user-repository]))
 
 (defn uuid [] (str (java.util.UUID/randomUUID)))
 
 (defn get-all-users
   "Get all documents from the database"
   []
+  (log/info (str "Get all documents from the database"))
   (user-repository/get-all-users))
