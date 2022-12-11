@@ -2,7 +2,7 @@
   (:require [clojure.java.jdbc :as jdbc]
             [clojure.tools.logging :as log]
             [api-login-microservice-v4.entity.user-entity :as user]
-            ;[clojure-rest.config.database :as database]
+            [api-login-microservice-v4.config.database :as database]
             [api-login-microservice-v4.repository.user-repository :as user-repository]))
 
 (defn uuid [] (str (java.util.UUID/randomUUID)))
