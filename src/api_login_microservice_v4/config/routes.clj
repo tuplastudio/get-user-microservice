@@ -23,6 +23,3 @@
              )
            ))
 
-
-(def app-routes
-  swagger-conf/swagger-routes)
