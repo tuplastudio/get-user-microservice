@@ -4,7 +4,8 @@
             [dotenv :refer [env app-env]]
             [clojure.java.jdbc :as jdbc]))
 
-(defdb db (postgres {:db ""
-                     :user ""
-                     :host ""
-                     :password ""}))
+(defdb db (postgres {:db (env :DB_NAME)
+                     :user (env :DB_USER)
+                     :port (Integer/parseInt(env :DB_PORT))
+                     :host (env :DB_HOST)
+                     :password (env :DB_PASS)}))

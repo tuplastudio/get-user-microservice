@@ -96,3 +96,7 @@ fabric.properties
 src/.DS_Store
 target
 target/
+
+.env.development
+.env
+.env.test
