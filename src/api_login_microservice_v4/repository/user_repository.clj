@@ -7,4 +7,4 @@
 (defn get-all-users
   "Get all users from the database"
   []
-  (let users [(select user-entity/user)]))
+  (select user-entity/user))

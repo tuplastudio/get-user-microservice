@@ -12,5 +12,4 @@
 (defn get-all-users
   "Get all documents from the database"
   []
-  (log/info (str "Get all documents from the database"))
   (user-repository/get-all-users))
