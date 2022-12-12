@@ -10,7 +10,8 @@
                   [prismatic/schema "1.4.1"] ; bean validation equivalent for clojure
                   [ring/ring-json "0.5.1"] ; ring server json support
                   [ring/ring-defaults "0.3.4"] ; ring server default dependencies
-                  [org.postgresql/postgresql "42.1.4"]
+                  [org.postgresql/postgresql "42.1.4"] ; driver to PostgreSQL
+                  [lynxeyes/dotenv "1.1.0"] ; env managment
                   [metosin/compojure-api "2.0.0-alpha30"]]
    :ring {:handler api-login-microservice-v4.handler/app}
    :uberjar-name "server.jar"
